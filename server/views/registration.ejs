@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration</title>
+  <link rel="icon" type="image/png" href="http://cet-gov.ac.in/web/libs/img/logo.png">
+  <!-- Add your CSS stylesheets and other meta tags here -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+
+  <div class="logos">
+    <img id="logo" src="http://cet-gov.ac.in/web/libs/img/logo.png" alt="" />
+    <img id="cetLogo" src="http://cet-gov.ac.in/web/libs/img/CET_logo.png" alt="" />
+  </div> 
+
+  <br><br>
+  <a href="/admin/login">Go Back</a>
+  <br>
+
+  <div>
+    <div class="deptName" id="home">
+      <h1 id="cse">Computer Science and Engineering</h1>
+    </div>
+  </div>
+
+  <div class="register">
+
+    
+
+    <h1>Registration</h1>
+    <br>
+
+   
+
+    <form action="/register" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br><br>
+
+    <label for="isAdmin">Admin:</label>
+    <input type="checkbox" id="isAdmin" name="isAdmin">
+    <br><br><br>
+
+    <button id="regBtn" type="submit">Register</button>
+    <br><br>
+  </div>
+
+  </form>
+
+  <br><br><br><br>
+  
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2023 Computer Science and Engineering Department, Harshit Kumar Verma.
+    </p>
+  </footer>
+
+</body>
+</html>

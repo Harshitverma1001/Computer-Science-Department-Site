@@ -1,0 +1,27 @@
+<!-- noticesNews.ejs -->
+<!-- 
+  <div id="noticesNews">
+
+    <h1 id="newsHeading"><b>Notice and News</b></h1>
+    <br>
+    
+    <ul>
+      <% notices.forEach((notice) => { %>
+        <li>
+          <h3><%= notice.title %></h3>
+          <p><%= notice.description %></p>
+          <% if (notice.fileUrl) { %>
+            <% const extension = notice.fileUrl.split('.').pop().toLowerCase(); %>
+            <% if (['jpg', 'jpeg', 'png', 'gif'].includes(extension)) { %>
+              <img src="/uploads/<%= notice.fileUrl %>" alt="Notice Image" style="max-width: 300px;">
+            <% } else { %>
+              <a href="/uploads/<%= notice.fileUrl %>" download>Download File</a>
+            <% } %>
+          <% } %>
+        </li>
+      <% }) %>
+    </ul>
+  
+  </div>
+ -->
+  

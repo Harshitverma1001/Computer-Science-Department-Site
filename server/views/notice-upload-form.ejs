@@ -1,0 +1,58 @@
+<!-- notice-upload-form.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notice Upload</title>
+  <link rel="icon" type="image/png" href="http://cet-gov.ac.in/web/libs/img/logo.png">
+  <!-- Add your CSS stylesheets and other meta tags here -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+
+  <div class="logos">
+    <img id="logo" src="http://cet-gov.ac.in/web/libs/img/logo.png" alt="" />
+    <img id="cetLogo" src="http://cet-gov.ac.in/web/libs/img/CET_logo.png" alt="" />
+  </div> 
+
+  <br><br>
+
+  <a href="/notices">Go Back</a>
+
+  <div>
+    <div class="deptName" id="home">
+      <h1 id="cse">Computer Science and Engineering</h1>
+    </div>
+  </div>
+
+  <br>
+
+  
+  <!-- Notice upload form -->
+  <h2 id="uploadNotice">Upload a New Notice</h2>
+  <br><br><br>
+  <form action="/admin/notices/upload" method="POST" enctype="multipart/form-data">
+    <label id="label" for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+    <br><br><br>
+
+    <label id="descLabel" for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea>
+    <br><br><br>
+
+    <label id="fileLabel" for="file">File:</label>
+    <input type="file" id="file" name="file">
+    <br><br><br><br>
+
+    <button id="submitBtn" type="submit">Upload</button>
+    <br><br><br><br>
+  </form>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2023 Computer Science and Engineering Department, Harshit Kumar Verma.
+    </p>
+  </footer>
+
+</body>
+</html>

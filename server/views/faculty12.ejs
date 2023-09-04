@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <title>faculty1</title>
+
+    <style>
+        .container {
+            display: flex;
+            align-items: center; /* Vertically align items */
+        }
+
+        #bigImg {
+            width: 350px; /* Adjust the width to your preference */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 20px; /* Add some space between the image and the content */
+            margin-left: 100px;
+        }
+
+        #content1 {
+            flex-grow: 1;   /* Allow the content to grow and fill the remaining space  */
+        }
+
+        h1 {
+            font-size: 60px; /* Adjust the font size to your preference */
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 16px; /* Adjust the font size to your preference */
+            margin-top: 10px; /* Add some space between the heading and the paragraph */
+        }
+
+        #git{
+            margin-left: 300px;
+            color: white;
+            background-color: rgb(149, 26, 26);
+            width: 350px;
+            height: 50px;
+        }
+
+        #cse{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .deptName{
+            position: relative;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="logos">
+        <img id="logo" src="http://cet-gov.ac.in/web/libs/img/logo.png" alt="" />
+        <img id="cetLogo" src="http://cet-gov.ac.in/web/libs/img/CET_logo.png" alt="" />
+    </div>
+
+     <!-- Navigation bar -->
+    <nav>
+        <div class="lists">
+          <!-- <a href="#" onclick="showSection('home');" class="anchorSpace">Home</a>
+          <a href="#" onclick="showSection('about');" class="anchorSpace">About</a>
+          <a href="#" onclick="showSection('courses');" class="anchorSpace">Course Structure</a>
+          <a href="#" onclick="showSection('faculties');" class="anchorSpace">Faculties</a>
+          <a href="#" onclick="showSection('notices');" class="anchorSpace">Notices</a> -->
+
+          
+        </div>
+    </nav>
+
+    <div>
+        <div class="deptName" id="home">
+          <h1 id="cse">Faculty Profile</h1>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="container">
+        <img id="bigImg" src="http://cet-gov.ac.in/channel/uploads/faculties/SandeepKumar.jpg" alt="">
+        <div id="content1">
+            <h1>Sandeep Kumar</h1>
+        <p>
+            M.E. (BITS Pilani), B.E.
+            <br><br>
+
+            Assistant Professor
+            <br><br>
+
+            Computer Science and Engineering
+            <br><br>
+
+            Specialization :
+            <br><br>
+        </p>
+        </div>
+    </div>
+
+    <br><br>
+
+    <button id="git">Get in Touch</button>
+
+    <br><br><br><br>
+
+    <footer>
+        <p>
+          © 2023 Computer Science and Engineering Department, Harshit Kumar Verma.
+        </p>
+    </footer>
+
+    <br><br><br><br>
+
+</body>
+</html>

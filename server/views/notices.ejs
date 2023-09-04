@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notices</title>
+  <link rel="icon" type="image/png" href="http://cet-gov.ac.in/web/libs/img/logo.png">
+  <!-- Add your CSS stylesheets and other meta tags here -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+  <style>
+    a{
+      margin-right: 10px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="logos">
+    <img id="logo" src="http://cet-gov.ac.in/web/libs/img/logo.png" alt="" />
+    <img id="cetLogo" src="http://cet-gov.ac.in/web/libs/img/CET_logo.png" alt="" />
+  </div> 
+
+  <br><br>
+
+  <!-- Add a button to redirect to the home page -->
+  <div id="links">
+    <a href="/">Go to Home Page</a>
+    <a href="/admin/login">Go Back</a>
+    <a href="/admin/notices/upload">Upload a new Notice</a>
+    <a href="/logout">Logout</a>
+    <a href="/register">Register a new Admin</a>
+  </div>
+
+  <div>
+    <div class="deptName" id="home">
+      <h1 id="cse">Computer Science and Engineering</h1>
+    </div>
+  </div>
+
+  <h1 id="notices1">Notices</h1>
+  <ol id="noticesList">
+    <% notices.forEach((notice) => { %>
+      <li>
+        <h3><%= notice.title %></h3>
+        <p><%= notice.description %></p>
+        <!-- Display the uploaded file -->
+        <br>
+        <% if (notice.fileUrl) { %>
+            <% const extension = notice.fileUrl.split('.').pop().toLowerCase(); %>
+            <% if (['jpg', 'jpeg', 'png', 'gif'].includes(extension)) { %>
+              <img src="/uploads/<%= notice.fileUrl %>" alt="Notice Image" style="max-width: 300px;">
+            <% } else { %>
+              <a href="/uploads/<%= notice.fileUrl %>" download>Download File</a>
+            <% } %>
+          <% } %>
+          
+          <br><br><br>
+
+           <!-- Add delete button -->
+        <form action="/notices/<%= notice._id %>?_method=DELETE" method="POST">
+            <button id="deleteBtn" type="submit">Delete</button>
+        </form>
+      </li>
+    <% }) %>
+  </ol>
+</body>
+</html>
